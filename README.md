@@ -96,5 +96,34 @@
 
 
 
+
+![image](https://github.com/user-attachments/assets/735ce917-111e-4a7b-a05d-18dded587a83)
+
+
 19.	```In Browser you can directly run this to see the IPFS: https://ipfs.io/ipfs/QmWd9cavD8UGZQcqYBVhZqs2Jure5W9cgxR7S6TC4StfZe```
+
+![image](https://github.com/user-attachments/assets/b734ab9c-13d9-422f-8d35-d53a04bc4b32)
+
+
+
+
+
+# Privacy and encryption on IPFS through command line..
+
+1.	```echo "Hello, IPFS!" > myfile.txt```
+	
+2.	```ipfs add myfile.txt
+	openssl enc -aes-256-cbc -pbkdf2 -iter 100000 -salt -in myfile.txt -out myfile_encrypted.txt -pass pass:yourpassword```
+	
+3.	```ipfs add myfile_encrypted.txt```
+	
+4.	```cat myfile_encrypted.txt```
+	
+5.	```openssl enc -d -aes-256-cbc -pbkdf2 -iter 100000 -in myfile_encrypted.txt -out decrypted_file.txt -pass pass:yourpassword```
+	
+6.	```cat decrypted_file.txt```
+	
+7.	```ipfs add decrypted_file.txt```
+
+![image](https://github.com/user-attachments/assets/9f170609-6fe6-4324-ba37-8ab718f6b015)
 
